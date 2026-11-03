@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dabira portfolio</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="portfolio.css">
+
+</head>
+<body>
+   <!-- GATE -->
+  <div id="gate">
+      <h1 class="logo">ELLA <span>✨</span></h1>
+    <section class="sticky-floaty">
+    <span class="sticky-floaty1">Frond-End &lt;/&gt;</span>
+    <span class="sticky-floaty2">est 2024 <br>Ogun State🫶</span>
+    <span class="sticky-floaty3">Made in Ogun🪄</span>
+    <span class="sticky-floaty4">Crochet & Fashion girlie🧶</span>
+    <span class="sticky-floaty5">Content & Edits🎬</span>
+  </section>
+    <h1>Hi, who is there?</h1>
+    <div class="search">
+      <span><i class="fa-solid fa-magnifying-glass"></i></span>
+      <input type="text" placeholder="Type Ella to enter...">
+      <button onclick="checkName()">Enter</button>
+    </div>
+    <p class="hint">Only Ella can open this&bull; hint: your name is Ella</p>
+    <p class="error">Nope, only Ella can enter...Try again</p>
+    <p style="margin-top: 30px;">est. 2024 Ogun State &bull; Made in Ogun State &bull; Built in Ogun State</p>
+    <script>
+      function checkName(){
+        let val = document.getElementById('nameInput'). toLowerCase();
+        if(val=== 'Ella'){
+          alert('Welcome Ella!✨')
+        } else {
+          document.getElementById('errorMsg').style.display = 'block';
+        }
+      }
+    </script>
+</body>
+</html>

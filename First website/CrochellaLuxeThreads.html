@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrochellaLuxeThreads</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="CLT.css">
+</head>
+<body>
+  <header class="clt-header">
+    <!-- left -->
+  <div class="logo">
+    <img src="assest/Screenshot_20261016-210702_1.png" alt="">
+   
+   <div class="brand-name">
+    <span class="crochella">Crochella</span>
+    <span class="luxe">Luxe Threads</span>
+    </div>
+  </div>
+  <!-- right -->
+   <nav class="nav-bar">
+    
+     <a href="#">Home</a>
+    <a href="#">Size Guide</a>
+    <a href="#">Shop</a> 
+    <a href="#">Collections</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <!-- mirror -->
+    <a href="#"><svg class="mirror-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="" stroke-linejoin=""><rect x="11" y="1" width="12" height="23" rx="3"></rect><path d="M10 18 L8 22"></path><path d=M14 18 L16 22></path></svg>Mirror Check</a>
+    <a href="#" class="bag"><i class="fa-solid fa-bag-shopping"></i></a>
+   </nav>
+</header>
+<section class="panel2">
+  <div class="panel2-left">
+     <h1 class="confidence">Crocheted for You. <br> Confident in You.</h1>
+  <h3 class="slogan">Threads of Love, Loops of Luxury</h3>
+  <div class="note"> 
+  <p>Each piece is handcrafted with care, love, and attention to detail. From delicate stitches to bold luxurious textures.</p>
+  <p>Enjoy our collections, find your perfect piece, place an order and enjoy luxury threads crafted with love.</p>
+  </div>
+  <!-- Commet -->
+   <button class="button1">Explore</button>
+   <button class="button2">Shop Collections</button>
+  </div>
+  <div>
+    <img class="panel2-right" src="assest/Screenshot_20261026-190625_1.png" alt="">
+  </div>
+</section>
+<!-- CONFIDENCE BAR  WITH MALE/FEMALE ARROW -->
+ <div class="guide">
+    <h3>Size Guide</h3>
+    
+  
+  <div class="gender-switch">
+    <button onclick="prevGender()">&#9664;</button>
+    <span id="genderlabel">Female</span>
+    <button onclick="nextGender()">&#9654;</button>
+  </div>
+  <!-- FEMALE SHAPES -->
+   <div id="femaleShapes" class="body-types">
+    <div class="body-option">    
+      <img width="250px" src="assest/Screenshot_20261030-130623_1.png" alt="">
+      <p>Slim</p>
+      </div>
+      <div class="body-option">
+         <img width="250px" src="assest/Screenshot_20261030-125947_1.png" alt="">
+         <p>Petite</p>
+      </div>
+      <div class="body-option">
+      <img width="250px" src="assest/Screenshot_20261030-130214_1.png" alt="">
+  <p>Curvy</p>
+      </div>
+      <div class="body-option">
+    <img width="250px" src="assest/Screenshot_20261030-130542_1.png" alt="">
+     <p>Plus</p> 
+    </div>
+    </div>
+       
+   <!-- MALE SHAPES-HIDDEN FIRST -->
+    <div id="maleShapes" class="body-types" style="display: none;">
+      <div class="body-option">
+        <img width="270px"  src="assest/Screenshot_20261030-131613_1.png" alt="">
+       <p>Slim</p>
+       </div>
+
+       <div class="body-option">
+           <img width="250px" src="assest/Screenshot_20261030-131743_1.png" alt="">
+          <p>Petite</p>   
+      </div>
+
+      <div class="body-option">
+<img width="250px" src="assest/Screenshot_20261030-131627_1.png" alt="">
+        <p>Built</p>
+      </div>
+
+      <div class="body-option">
+        <img width="250px" src="assest/Screenshot_20261030-131826_1.png" alt="">
+        <p>Plus</p>
+        </div>
+<div>
+  </div>
+  </div>
+     <div class="footer">
+    <p>All size is <span class="worthy">Worthy. </span>Everyone deserves to feel <span class="con">Confident.</span></p>
+  <p class="handmade">Handmade With Love</p>
+  </div>
+  
+   
+   
+ <!-- JAVASCRIPT -->
+ <script>
+const genders = ["Female", "Male"];
+let genderIndex = 0;
+
+const genderLabel = document.getElementById("genderlabel");
+const femaleShapes = document.getElementById("femaleShapes");
+const maleShapes = document.getElementById("maleShapes");
+
+function showGender() {
+  const currentGender = genders[genderIndex];
+  genderLabel.textContent = currentGender;
+
+  femaleShapes.style.display = currentGender === "Female" ? "flex" : "none";
+  maleShapes.style.display = currentGender === "Male" ? "flex" : "none";
+}
+
+function nextGender() {
+  genderIndex = (genderIndex + 1) % genders.length;
+  showGender();
+}
+
+function prevGender() {
+  genderIndex = (genderIndex - 1 + genders.length) % genders.length;
+  showGender();
+}
+
+showGender();
+ </script>
+</body>
+</html>
